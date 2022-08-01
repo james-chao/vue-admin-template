@@ -6,7 +6,7 @@ function resolve(dir) {
   return path.join(__dirname, dir)
 }
 
-const name = defaultSettings.title || 'vue Admin Template' // page title
+const name = defaultSettings.title // page title
 
 // If your port is set to 80,
 // use administrator privileges to execute the command line.
@@ -104,7 +104,7 @@ module.exports = {
                 elementUI: {
                   name: 'chunk-elementUI', // split elementUI into a single package
                   priority: 20, // the weight needs to be larger than libs and app or it will be packaged into libs or app
-                  test: /[\\/]node_modules[\\/]_?element-ui(.*)/ // in order to adapt to cnpm
+                  test: /[\\/]node_modules[\\/]_?element-ui(.*)/
                 },
                 commons: {
                   name: 'chunk-commons',
@@ -115,7 +115,6 @@ module.exports = {
                 }
               }
             })
-          // https:// webpack.js.org/configuration/optimization/#optimizationruntimechunk
           config.optimization.runtimeChunk('single')
         }
       )

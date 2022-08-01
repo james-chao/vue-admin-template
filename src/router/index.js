@@ -43,29 +43,16 @@ export const constantRoutes = [
     hidden: true
   },
 
-  // {
-  //   path: '/',
-  //   component: Layout,
-  //   redirect: '/dashboard',
-  //   children: [{
-  //     path: 'dashboard',
-  //     name: 'Dashboard',
-  //     component: () => import('@/views/dashboard/index'),
-  //     meta: { title: 'Dashboard', icon: 'dashboard' }
-  //   }]
-  // },
-
   {
     path: '/',
     component: Layout,
-    children: [
-      {
-        path: 'form',
-        name: 'CRD Report',
-        component: () => import('@/views/form/index'),
-        meta: { title: 'CRD Report', icon: 'form' }
-      }
-    ]
+    redirect: '/dashboard',
+    children: [{
+      path: 'dashboard',
+      name: 'Dashboard',
+      component: () => import('@/views/form/index'),
+      meta: { title: 'CRD Report', icon: 'form' }
+    }]
   },
 
   // 404 page must be placed at the end !!!
