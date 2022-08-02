@@ -2,14 +2,14 @@
   <div class="app-container">
     <el-form ref="form" :model="form" label-width="120px">
       <!-- <el-form-item label="Material"> -->
-        <el-input v-model="form.name" placeholder="please input your material" />
+      <el-input v-model="form.name" placeholder="please input your material" />
       <!-- </el-form-item> -->
       <!-- <el-form-item label="SKU number"> -->
-        <el-select v-model="form.region" placeholder="please select your SKU">
-          <el-option label="Zone one" value="shanghai" />
-          <el-option label="Zone two" value="beijing" />
-        </el-select>
-        <el-checkbox v-model="form.type" label="Query By L11" name="type" />
+      <el-select v-model="form.region" placeholder="please select your SKU">
+        <el-option label="Zone one" value="shanghai" />
+        <el-option label="Zone two" value="beijing" />
+      </el-select>
+      <el-checkbox v-model="form.type" label="Query By L11" name="type" />
       <!-- </el-form-item> -->
       <!-- <el-form-item label="Instant delivery">
         <el-switch v-model="form.delivery" />
